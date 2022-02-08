@@ -44,3 +44,22 @@ jobs:
         working-directory: ./naming-server
         # It's a good practice run the tests.
         run: mvn spring-boot:build-image -DskipTests
+        
+      - name: Build API Gateway Container Image
+        working-directory: ./api-gateway
+        # It's a good practice run the tests.
+        run: mvn spring-boot:build-image -DskipTests
+
+      - name: Build Cambio Microservice Jar
+        working-directory: ./cambio-service
+        # It's a good practice run the tests.
+        run: mvn clean package -DskipTests   
+
+      - name: Build Book Microservice Jar
+        working-directory: ./book-service
+        # It's a good practice run the tests.
+        run: mvn clean package -DskipTests
+
+      - name: Docker Compose Build
+        working-directory: ./
+        run: docker compose build  
