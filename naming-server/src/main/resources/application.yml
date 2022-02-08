@@ -1,0 +1,9 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: naming-server
+eureka:
+  clint:
+    register-with-eureka: false #tirar em producao
+    fetch-registry: false
