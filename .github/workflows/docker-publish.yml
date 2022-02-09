@@ -66,14 +66,20 @@ jobs:
 
       - name: Push to Dockerhub Container Registry
       # It's a good practice to create an build with de tag latest
-      # docker tag ${{secrets.DOCKER_USERNAME}}/naming-server:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server:${{github.run_id}}
-      # docker push ${{secrets.DOCKER_USERNAME}}/naming-server:latest
         run: |
           docker tag ${{secrets.DOCKER_USERNAME}}/naming-server:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server:${{github.run_id}}
+          docker tag ${{secrets.DOCKER_USERNAME}}/naming-server:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server:latest
           docker tag ${{secrets.DOCKER_USERNAME}}/api-gateway:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/api-gateway:${{github.run_id}}
+          docker tag ${{secrets.DOCKER_USERNAME}}/api-gateway:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/api-gateway:latest
           docker tag ${{secrets.DOCKER_USERNAME}}/book-service:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/book-service:${{github.run_id}}
+          docker tag ${{secrets.DOCKER_USERNAME}}/book-service:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/book-service:latest
           docker tag ${{secrets.DOCKER_USERNAME}}/cambio-service:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/cambio-service:${{github.run_id}}
+          docker tag ${{secrets.DOCKER_USERNAME}}/cambio-service:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/cambio-service:latest
           docker push ${{secrets.DOCKER_USERNAME}}/naming-server:${{github.run_id}}
+          docker push ${{secrets.DOCKER_USERNAME}}/naming-server:latest
           docker push ${{secrets.DOCKER_USERNAME}}/api-gateway:${{github.run_id}}
+          docker push ${{secrets.DOCKER_USERNAME}}/api-gateway:latest
           docker push ${{secrets.DOCKER_USERNAME}}/book-service:${{github.run_id}}
+          docker push ${{secrets.DOCKER_USERNAME}}/book-service:latest
           docker push ${{secrets.DOCKER_USERNAME}}/cambio-service:${{github.run_id}}
+          docker push ${{secrets.DOCKER_USERNAME}}/cambio-service:latest

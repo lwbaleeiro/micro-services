@@ -29,7 +29,5 @@ E
 Mbook-service/src/main/java/br/com/book/service/controller/BookController.java,d\6\d6e350870ae4eb61391505dc09a979fa1fad0848
 F
 cambio-service/pom.xml,1\2\120d48fee08d5fafebd7b0087943419dc45b3dcd
-C
-api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73
 D
 book-service/pom.xml,e\6\e644ef49641e7b9b6b80b6181b8f9b17771bda26

@@ -60,14 +60,14 @@ services:
       MYSQL_TCP_PORT: 3310
 
   naming-server:
-    image: lwbaleeiro/naming-server:0.0.1-SNAPSHOT
+    image: lwbaleeiro/naming-server:latest
     ports:
       - 8761:8761
     networks:
       - services-network
 
   api-gateway:
-    image: lwbaleeiro/api-gateway:0.0.1-SNAPSHOT
+    image: lwbaleeiro/api-gateway:latest
     ports:
       - 8765:8765
     depends_on:
@@ -83,7 +83,7 @@ services:
       SPRING_ZIPKIN_SENDER_TYPE: rabbit
 
   cambio-service:
-    image: lwbaleeiro/cambio-service:0.0.1-SNAPSHOT
+    image: lwbaleeiro/cambio-service:latest
     build:
       context: .
       dockerfile: cambio-service/Dockerfile
@@ -111,7 +111,7 @@ services:
       SPRING_ZIPKIN_SENDER_TYPE: rabbit
 
   book-service:
-    image: lwbaleeiro/book-service:0.0.1-SNAPSHOT
+    image: lwbaleeiro/book-service:latest
     build:
       context: .
       dockerfile: book-service/Dockerfile
