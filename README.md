@@ -6,7 +6,7 @@ Docker 4.4.4 ou superior
 
 ## Após subir os containers:
 **Zipkin**: http://localhost:9411/zipkin/ \
-**Rabit**: http://localhost:15672/#/ \
+**Rabbitmq**: http://localhost:15672/#/ \
 **Eureka**: http://localhost:8761/ \
 **Swagger**: http://localhost:8765/swagger-ui.html
 
@@ -19,6 +19,7 @@ Docker 4.4.4 ou superior
 - [API Gateway e RouteLocator com Spring Cloud Gateway](#spring-cloud-gateway);
 - [Circuit Breaker com Resilience4j](#resilience4j);
 - [Swagger OpenAPI nos microsserviços](#swagger);
+- [RabbitMq](#rabbitMq) 
 - Distributed Tracing com Docker, [Zipkin](#zipkin), [Eureka](#eureka) e [Sleuth](#sleuth);
 - Dockerização, entrega contínua com Github Actions.
 
@@ -46,6 +47,9 @@ The concept of a circuit breaker is to prevent calls to microservice when it’s
 
 ## Swagger
 Swagger allows you to describe the structure of your APIs so that machines can read them. The ability of APIs to describe their own structure is the root of all awesomeness in Swagger. Why is it so great? Well, by reading your API’s structure, we can automatically build beautiful and interactive API documentation [More about Swagger](https://swagger.io/docs/specification/2-0/what-is-swagger/)
+
+## RabbitMq
+RabbitMQ is a message broker: it accepts and forwards messages. You can think about it as a post office: when you put the mail that you want posting in a post box, you can be sure that the letter carrier will eventually deliver the mail to your recipient. In this analogy, RabbitMQ is a post box, a post office, and a letter carrier. [More about RabbitMq](https://www.rabbitmq.com/tutorials/tutorial-one-java.html)
 
 ##  Zipkin
 Zipkin is a distributed tracing system. It helps gather timing data needed to troubleshoot latency problems in service architectures. Features include both the collection and lookup of this data. [More about Zipkin](https://zipkin.io/)
