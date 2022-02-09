@@ -65,6 +65,9 @@ jobs:
         run: docker compose build  
 
       - name: Push to Dockerhub Container Registry
+      # It's a good practice to create an build with de tag latest
+      # docker tag ${{secrets.DOCKER_USERNAME}}/naming-server:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server:${{github.run_id}}
+      # docker push ${{secrets.DOCKER_USERNAME}}/naming-server:latest
         run: |
           docker tag ${{secrets.DOCKER_USERNAME}}/naming-server:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/naming-server:${{github.run_id}}
           docker tag ${{secrets.DOCKER_USERNAME}}/api-gateway:0.0.1-SNAPSHOT ${{secrets.DOCKER_USERNAME}}/api-gateway:${{github.run_id}}
