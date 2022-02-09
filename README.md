@@ -21,7 +21,7 @@ Docker 4.4.4 ou superior
 - [Swagger OpenAPI nos microsserviços](#swagger);
 - [RabbitMq](#rabbitMq) 
 - Distributed Tracing com Docker, [Zipkin](#zipkin), [Eureka](#eureka) e [Sleuth](#sleuth);
-- Dockerização, entrega contínua com Github Actions.
+- Dockerização, entrega contínua com [Github Actions](#github-actions).
 
 
 ## Spring Cloud
@@ -46,7 +46,7 @@ In a distributed environment, services need to communicate with each other. Howe
 The concept of a circuit breaker is to prevent calls to microservice when it’s known the call may fail or time out. This is done so that clients don’t waste their valuable resources handling requests that are likely to fail. Using this concept, you can give the server some spare time to recover. [More About Resilience4j](https://medium.com/bliblidotcom-techblog/resilience4j-circuit-breaker-implementation-on-spring-boot-9f8d195a49e0)
 
 ## Swagger
-Swagger allows you to describe the structure of your APIs so that machines can read them. The ability of APIs to describe their own structure is the root of all awesomeness in Swagger. Why is it so great? Well, by reading your API’s structure, we can automatically build beautiful and interactive API documentation [More about Swagger](https://swagger.io/docs/specification/2-0/what-is-swagger/)
+Swagger allows you to describe the structure of your APIs so that machines can read them. The ability of APIs to describe their own structure is the root of all awesomeness in Swagger. Why is it so great? Well, by reading your API’s structure, we can automatically build beautiful and interactive API documentation. [More about Swagger](https://swagger.io/docs/specification/2-0/what-is-swagger/)
 
 ## RabbitMq
 RabbitMQ is a message broker: it accepts and forwards messages. You can think about it as a post office: when you put the mail that you want posting in a post box, you can be sure that the letter carrier will eventually deliver the mail to your recipient. In this analogy, RabbitMQ is a post box, a post office, and a letter carrier. [More about RabbitMq](https://www.rabbitmq.com/tutorials/tutorial-one-java.html)
@@ -56,3 +56,6 @@ Zipkin is a distributed tracing system. It helps gather timing data needed to tr
 
 ## Sleuth
 This library makes it possible to identify logs pertaining to a specific job, thread, or request. Sleuth integrates effortlessly with logging frameworks like Logback and SLF4J to add unique identifiers that help track and diagnose issues using logs. [More about Sleuth](https://www.baeldung.com/spring-cloud-sleuth-single-application)
+
+## GitHub Actions
+GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production. [More about GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
