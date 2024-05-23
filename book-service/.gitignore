@@ -1,33 +1,49 @@
-HELP.md
+# Diretórios de compilação e artefatos
+
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+classes/
 
-### VS Code ###
-.vscode/
+# Arquivos de log e cache
+
+*.log
+*.cache
+*.tmp
+
+# Arquivos de configuração local
+
+**/application.properties
+**/application.yml
+**/bootstrap.yml
+**/local.properties
+
+# IDE e arquivos de configuração específicos
+
+**/.idea/
+**/.project
+**/.classpath
+**/.settings/
+
+# Arquivos binários e pastas
+
+*.iml
+*.class
+*.jar
+
+# Diretórios de documentação
+
+**/doc/
+**/javadoc/
+
+# Pastas de testes
+
+**/test/
+**/src/test/
+
+# Arquivos temporários do Maven
+
+**/target/m2e-plugin-testing-maven-plugin/target**
+
+# Arquivos de ambiente de desenvolvimento local
+
+**/env/*
